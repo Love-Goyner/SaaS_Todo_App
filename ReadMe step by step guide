@@ -1,0 +1,29 @@
+1.first we created the neon database
+2.and then we connected the prisma with the command npm install prisma --save-dev
+3.then we run this command to tell that we are using the postgresql " npx prisma init --datasource-provider postgresql "
+this create the file prisma/schema.prisma and in that we defined our models and relationship in them
+4.then we created the migration with the command " npx prisma migrate dev --name init " this migrated the database in the
+ neon database and also created the file thaat tell us about the sql query we are about to execute in the neon database
+5.then we run the command " npx prisma generate " to generate the prisma client into the node_modules folder 
+6.now connect the prisma with client by making the prisma.ts in lib folder and some code in the prisma.ts file
+
+//clerk setup
+1. install the clerk with "npm i @clerk/nextjs
+2. copy the enviroment variable from the quick quide 
+3. copy paste the middleware.ts for the clerk
+4. add the <ClerkProvider> in the app/layout.js to access all the clerk component
+
+//create component
+1. .................
+
+//set up the clerk middleware for the public and auth routes
+1. export authmiddleware
+2. in export default authmiddleware ({}) in curly bracket frist give the array of the public routes
+3. then use the afterAuth for the excessing the auth and do things accoridng to the value in auth
+
+
+//now we are dealing with the webhook so webhook is only production use so for that we use follwing techniq to use that locally
+1. install svix ( npm i svix )
+2. now install the localTunnel ( npm i -g localtunnel )
+3. now give the port to the localtunnel ( lt --port 3000 ) to start the localtunnel ( port same as website port )
+4. start the localtunnel and start the app on the port provided by the localtunnel
